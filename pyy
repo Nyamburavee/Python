@@ -1,0 +1,879 @@
+#castign in python shows the data type
+x = int(6)
+y = str("vee")
+z = float(8.007)
+
+#Get type
+x = 5
+y = "vee"
+print(type(x))
+print(type(y))
+
+#strings can use either double or single quotes and are immutable
+#writing a string on a new line without printing on a new line
+my_string = ("Hello \
+world ")
+print(my_string)
+
+#slicing a string
+my_string = ("Hello world ")
+a = my_string[1:4]
+print(a)
+
+#reverse a string
+b = my_string[::-1]
+print(b)
+
+#removing whitespace from a string
+my_string = ("   Hello  ")
+string = my_string.strip()
+print(string) 
+
+#strings to upper or lower case
+my_string = ("Hello")
+print(my_string.upper())
+print(my_string.lower())
+
+#check what string starts or ends with
+print(my_string.startswith("H"))
+print(my_string.endswith("lo"))
+
+#finding index of character
+print(my_string.find("e"))
+
+#count the characters in a string
+print(my_string.count("l"))
+
+#replacing words
+print(my_string.replace("Hello", "Jambo"))
+
+
+#formating strings with % and formating
+var = "Greetings"
+our_string = "Our string is %s" % var
+print(our_string)
+
+#for numbers
+var1 = 6
+our_number = "Our number %d" % var
+print(our_number)
+
+#for decimals wit specified decimal points
+var = 89.343567
+our_float = "Our decimal is %.2f" % var
+print(our_float)
+
+#using .format meethod
+var1 = 2.34567
+my_number = "My number is {:.2f}".format(var1)
+print(my_number)
+
+#using .format meethod
+var1 = "Hello"
+my_str = "My word is {}".format(var1)
+print(my_str)
+
+#formating using f-strings
+var1 = 45
+var2 = 4
+my_var = f"my var is {var1} and {var2}"
+print(my_var)
+
+
+#Variable names are case sensitive
+a = 4
+A = "Sally"
+#A will not overwrite a
+
+#Many Values to Multiple Variables
+x, y, z = 1, 2, 3
+print(x) #returns 1
+print(y) # returns 2
+print(z) #returns 3
+
+#One Value to Multiple Variables
+x = y = z = "Vee"
+print(x) #All return vee
+print(y)
+print(z)
+
+#Unpacking Values
+fruits = ["mangoes", "Bananas", "oranges"]
+x, y, z = fruits
+print(x) #all return fruit values respectively
+print(y)
+print(z)
+
+#string to lower () /upper() case
+phrase = "VERONICA"
+print(phrase.lower())
+
+#string length
+phrase = "VERONICA"
+print(len(phrase))
+
+#string replace 
+phrase = "VERONICA"
+print(phrase.replace("VERONICA", "Nyambura"))
+
+#Python numbers
+print(5) #returns 5
+
+#math operations +,-,*,\,%
+print(5 + 3) #returns 8
+
+#prioritizing operations
+print(3  * (4 + 6)) #starts with addition
+
+#numbers to strings
+my_num = 4
+print(str(my_num))
+
+#Absolute values. returns 5
+myNum = -5
+print(abs(myNum))
+
+#Pow return 3^4
+print(pow(3,4))
+
+#Rounding up numbers. returns 3
+print(round(3.4))
+
+#max()\min() returns the bigger or the smaller number. returns 36
+print(max(34,6))
+
+#square root
+print(math.sqrt(36))
+
+#Getting user input and storing it in a variable
+name = input("your name: ")
+print("Hello " + name)
+
+#Basic calculator
+num1 = input("Input a number: ")
+num2 = input("Input another number: ")
+results = int(num1) + int(num2) #convert strings to numbers. use float for decimals 
+
+print(results)
+
+#Basic mad lib
+color = input("Enter a color: ")
+plural_noun = input("Enter a plural noun: ")
+fruit = input("Enter a fruit name: ")
+
+print("Roses are " + color)
+print(plural_noun + " are green")
+print("I love " + fruit)
+
+# Lists
+fruits = ["mangoes", "oranges", "bananas", "apples"]
+print(fruits) #returns the list of fruits
+
+# Accesing items on a Lists
+fruits = ["mangoes", "oranges", "bananas", "apples"]
+print(fruits[1]) #returns oranges
+print(fruits[1:]) #from index 1 to the last item
+print(fruits[1:3]) #from index 1 excluding the 3 item
+
+#replacing items on a list
+fruits[1] = "pineapple"
+print(fruits[1])
+
+# List extend() func adds a list at the end of the list
+fruits = ["mangoes", "oranges", "bananas", "apples", "watermelon"]
+quantity = [1, 4, 5, 8, 3]
+fruits.extend(quantity)
+print(fruits)
+
+# List append() func adds items at the end
+fruits = ["mangoes", "oranges", "bananas", "apples", "watermelon"]
+fruits.append("plums")
+print(fruits)
+
+# List instert() func adds items at specified positions
+fruits = ["mangoes", "oranges", "bananas", "apples", "watermelon"]
+fruits.insert(1, "plums")
+print(fruits)
+
+# List remove() func deletes items
+fruits = ["mangoes", "oranges", "bananas", "apples", "watermelon"]
+fruits.remove("bananas")
+print(fruits)
+
+#pop() removes the las item
+fruits = [
+    "banana", "mango", "apples", "orange"
+]
+
+item = fruits.pop()
+print(item) #reeturns orange
+
+# List clear() func deletes all items
+fruits = ["mangoes", "oranges", "bananas", "apples", "watermelon"]
+fruits.clear()
+print(fruits)
+
+# List index() func checks index of items
+fruits = ["mangoes", "oranges", "bananas", "apples", "watermelon"]
+print(fruits.index("apples"))
+
+# List count() func checks the number of times an item is repeated
+fruits = ["mangoes", "oranges", "bananas", "bananas", "apples", "watermelon"]
+print(fruits.count("bananas"))
+
+# List sort() func sorts items in alphabetical\ascending order
+fruits = ["mangoes", "oranges", "bananas", "bananas", "apples", "watermelon"]
+fruits.sort()
+print(fruits)
+
+# List reverse() func sorts items from the last to the first
+fruits = ["mangoes", "oranges", "bananas", "bananas", "apples", "watermelon"]
+fruits.reverse()
+print(fruits)
+
+# List copy() func duplicates a list
+fruits = ["mangoes", "oranges", "bananas", "bananas", "apples", "watermelon"]
+fruits2 = fruits.copy()
+print(fruits2)
+
+# list with multiple same items
+my_list = [0] * 5
+print(my_list) #returns [0, 0, 0, 0, 0,]
+
+# concatenating lists
+my_list = [0] * 5
+list2 = [1, 2, 3, 4]
+
+new_list = my_list + list2
+print(new_list)
+
+#slicing lists
+my_list = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+a = my_list[1:6] #excludes the last item
+
+print(a) 
+
+#splicing lists
+my_list = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+a = my_list[::2] #from the first item with a step index 2
+
+print(a) 
+
+#new operated list
+my_list = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+new_list = [i+i for i in my_list]
+
+print(new_list)
+
+# Tuples are immutable
+numbers =(1, 3, 5, 6)
+print(numbers)
+
+#tuple functions
+len()
+count()
+index()
+slice()
+unpacking
+
+
+#Basic function
+def say_hi ():
+    print("Hello Vee")
+
+say_hi() #call the func
+
+
+#Basic function with parameters
+def say_hi (name):
+    print("Hello " +  name)
+
+say_hi("Vee")
+say_hi("Dylan") #call the func
+
+#Basic function return statement
+def cube(num):
+    return num*num*num
+result = cube(3)
+
+print(result)
+
+#Basic if statement using booleans
+is_female = True
+if is_female:
+    print("You are a girl")
+
+    #Basic if or statement
+is_female = True
+is_short = True
+if is_female or is_short:
+    print("You are either a girl or short or both")
+else:
+    print("you are neither a girl nor short")
+
+    #Basic if and statement
+is_female = True
+is_short = True
+if is_female and is_short:
+    print("You are a short gilr")
+else:
+    print("you are either not a girl or not short or both")
+
+    #Basic elif statement
+is_female = True
+is_short = False
+if is_female and is_short:
+    print("You are a short gilr")
+elif is_female and not(is_short):
+    print("You are a tall female")
+else:
+    print("you are either not a girl or not short or both")
+
+#If and comparison
+def max_num (num1, num2, num3):
+    if num1 >= num2 and num1 >= num3:
+        return num1
+    elif num2 >= num1 and num2 >= num3:
+        return num2
+    else:
+        return num3
+
+print(max_num(2,4,1))
+
+
+#Advanced calculator
+num1 = float(input(" Enter first number: "))
+op = input("Enter the operator: ")
+num2 = float(input("Enter the second number: "))
+
+if op == "+":
+    print(num1 + num2)
+elif op == "-":
+    print(num1 - num2)
+elif op == "*":
+    print(num1 * num2)
+elif op == "/" and num1>0:
+    print(num1 / num2)
+elif num1 == 0:
+    print("not divisible")
+else:
+    print("Invalid operator")
+
+    
+#Dictionaries
+monthConversions = {
+    "jan": "January",
+    1: "february",
+    "mar": "march",
+    3: "april",
+    "my": "may",
+}
+
+print(monthConversions.get("mar"))
+
+#accessing keys in a dictionary
+my_dict = {
+    "name": "Vee",
+    "Age": 25,
+    "sex": "female"
+}
+
+value = my_dict["name"]
+print(value)
+
+#adding items in a dictionary
+my_dict = {
+    "name": "Vee",
+    "Age": 25,
+    "sex": "female"
+}
+
+my_dict["email"] = "ajdhru2gmail.com"
+print(my_dict)
+
+#deleting keys in a dictionary
+my_dict = {
+    "name": "Vee",
+    "Age": 25,
+    "sex": "female"
+}
+
+my_dict.pop("name")
+print(my_dict)
+
+#checking for keys in a dictionary
+my_dict = {
+    "name": "Vee",
+    "Age": 25,
+    "sex": "female"
+}
+
+try:
+    print(my_dict["name"])
+except:
+    print(Error)
+
+#looping through keys in a dictionary
+my_dict = {
+    "name": "Vee",
+    "Age": 25,
+    "sex": "female"
+}
+for key in my_dict.keys():
+    print(key)
+
+#looping through values in a dictionary
+my_dict = {
+    "name": "Vee",
+    "Age": 25,
+    "sex": "female"
+}
+for value in my_dict.values():
+    print(value)
+
+#looping through keys and values in a dictionary
+my_dict = {
+    "name": "Vee",
+    "Age": 25,
+    "sex": "female"
+}
+for value, keys in my_dict.items():
+    print(value, keys)
+
+#copying a dictionary
+my_dict = {
+    "name": "Vee",
+    "Age": 25,
+    "sex": "female"
+}
+
+new_dict = my_dict.copy()
+print(new_dict)
+
+#updating a dictionary
+my_dict = {
+    "name": "Vee",
+    "Age": 25,
+    "sex": "female"
+}
+
+my_dict2 = {
+     "name": "Vee",
+     "Age": 25,
+     "city": "Nairobi",
+ }
+my_dict.update(my_dict2)
+print(my_dict)
+
+
+#number keys in a dictionary
+my_dict = {
+    2: 4,
+    3: 9,
+    4: 16,
+}
+value = my_dict[3] #access using the actual key not the index
+
+
+print(value)
+
+#using tuples as keys in a dictionary
+mytuple = (5, 6)
+my_dict = {mytuple: 11,}
+
+print(my_dict)
+
+#Sets are unordered and mutabale
+my_set = {1, 2, 3}
+print(my_set)
+
+
+
+#creating an empty set
+my_set = set()
+print(my_set)
+
+#adding items in an empty set
+my_set.add(1)
+my_set.add(2)
+my_set.add(3)
+print(my_set)
+
+#removing elememts froma set
+my_set.remove(2)
+print(my_set)
+
+#iterating through a set
+for i in my_set:
+    print(i)
+
+#checking for items in a set
+if 1 in my_set:
+    print("yes")
+
+#union of sets combines two sets without dublication
+odds = {1, 3, 5, 7, 9}
+evens = {0, 2, 4, 6, 8}
+primes = {2, 3, 5, 7}
+u = odds.union(evens)
+print(u)
+
+#intersection of sets will contain numbers presents in two sets
+i = odds.intersection(primes)
+print(i) #{3, 5, 7}
+
+
+#difference checks the diff in two sets
+set1 = {1, 2, 3, 4, 5, 6, 7, 8, 9}
+set2 = {1, 2, 3, 7, 8, 9, 11, 12}
+diff = set1.difference(set2)
+print(diff)
+
+#symmetric difference returns all numbers absent in two sets without dublication
+diffs = set1.symmetric_difference(set2)
+print(diffs) #returns 4, 5, 6, 11, 12
+
+#set update completes the set without duplication. will return 1234567891112
+set1.update(set2)
+print(set1)
+
+#intersection update only keeps the items present in both sets
+set1.intersection_update(set2)
+print(set1) #returns {1, 2, 3, 7, 8, 9}
+
+
+#difference_update removes the items found in another set
+set1.difference_update(set2)
+print(set1) #returns {4, 5, 6}
+
+
+#symmentric_difference_update keeeps elements found in the two elements but not elements found in both
+set1.symmetric_difference_update(set2)
+print(set1) #returns {4, 5, 6, 11, 12}
+
+#checking if a set is a superset of a subset
+set1 = {1, 2, 3, 4, 5, 6,}
+set2 = {1, 2, 3}
+print(set1.issuperset(set2))
+print(set2.issubset(set1))
+
+#isdisjoint checks is there are simmilar elements in two sets
+set1 = {1, 2, 3, 4, 5, 6,}
+set2 = {1, 2, 3}
+print(set1.isdisjoint(set2))
+
+#copying a set
+set1 = {1, 2, 3, 4, 5, 6,}
+set2 = set1.copy()
+print(set2)
+
+# frozen set is an immutable set
+a = frozenset([1, 2, 3, 4])
+print(a)
+
+
+
+
+
+
+
+#while loop
+i = 1
+while i <= 10:
+    print(i)
+    i += 1
+
+print("Done with the loop")
+
+#while loop guess game
+secret_word = "Banana"
+guess = " "
+while guess != secret_word:
+    guess = input("Enter a secret word: ")
+
+print(" You win")
+
+#while loop Advanced guess game
+secret_word = "Banana"
+guess = " "
+guess_count = 0
+guess_limit = 3
+out_of_guesses = False
+
+while guess != secret_word and not(out_of_guesses):
+    if guess_count < guess_limit:
+        guess = input("Enter a word: ")
+        guess_count += 1
+    else:
+        out_of_guesses = True
+
+if out_of_guesses:
+    print("Sorry.You loose")
+else:
+    print("you won!")
+
+    
+    #for loops
+for letter in "My friends":
+    print(letter)
+friends = ["mary", "john", "Tom"]
+for name in friends:
+    print(name)
+
+for index in range(10):
+    print(index)
+
+
+# Exponential functions
+def base_pow (base_num, pow_num):
+    results = 1
+    for index in range(pow_num):
+        results = results * base_num
+    return results
+
+
+print(base_pow(3, 3))
+
+#nested lists and nested for loops
+nested_list = [
+    [1, 2, 3],
+    [4, 5, 6],
+    [7, 8, 9],
+]
+
+for row in nested_list:
+    for col in row:
+        print(col) #returns 123456789
+
+
+#making a translator
+def my_language ( phrase):
+    translation = ""
+    for letter in phrase:
+        if letter.lower() in "aeiou":
+            if letter.isupper()
+            translation = translation + "G"
+            else:
+                traslation = translation + "g"
+        else:
+            translation = translation + letter
+    return translation
+
+
+print(my_language(input("Enter  a phrase: ")))
+
+
+#Try Except
+try:
+    number = int(input("enter a number: "))
+    print(number)
+
+except ValueError as err:
+    print(err)
+
+#Reading files
+account_info = open("account_info.txt", "r")
+print(account_info.readable()) #checks if the file is readable
+print(account_info.read())  #reads the file content
+print(account_info.readline()) #reads the first line
+print(account_info.readlines()) #returns lines in an array
+
+account_info.close()
+
+#Appending to a files
+account_info = open("account_info.txt", "a")
+account_info.write("\nvee_1223")
+
+account_info.close()
+
+#Writting files overrides the content 
+account_info = open("account_info.txt", "")
+account_info.write("\nvee_1223")
+
+account_info.close()
+
+#class and object
+class studnet:
+    def __init__(self, name, major, gpa):
+        self.name = name
+        self.major = major
+        self.gpa = gpa
+
+
+#To use the class
+from filename import student
+student1 = student("jane", "History", "8.4")
+print(student1.name) #returns jane
+
+
+#Inheriting a class
+from student import Student
+
+
+class Chef(Student): #class Chef inherits all the functionality of the class Student
+    def can_study(self):
+        print("can study french")
+
+#collections:counter
+from collections import Counter
+a = "aaabbbcc"
+my_counter = Counter(a)
+print(my_counter) #returns Counter({'a': 3, 'b': 3, 'c': 2})
+
+#accessing the elements in the counter
+print(my_counter.keys()) #returns dict_keys(['a', 'b', 'c'])
+print(my_counter.values()) #returns dict_values([3, 3, 2])
+
+#checking the most_common element
+print(my_counter.most_common(1)) #returns one most common [('a', 3)]
+
+#return the elemets of a counter as a list
+print(list(my_counter.elements())) #returns ['a', 'a', 'a', 'b', 'b', 'b', 'c', 'c']
+
+#namedtuple
+from collections import namedtuple
+num = namedtuple('num', 'x,y')
+pt = num(1, 3)
+print(pt)
+print(pt.x, pt.y) #returns the values of x and y
+
+#Orderedict
+from collections import OrderedDict
+our_dict = OrderedDict
+our_dict = {
+    "a": 1,
+    "b": 2,
+    "e": 5,
+    "c": 3
+
+}
+print(our_dict)
+
+#defaultdict
+from collections import defaultdict
+dict = defaultdict(int)
+dict["a"] = 3
+dict["d"] = 4
+print(dict) #returns defaultdict(<class 'int'>, {'a': 3, 'd': 4})
+
+from collections import deque
+d = deque()
+d.append(1)
+d.append(2)
+print(d) #returns deque([1, 2])
+
+d.appendleft(3)
+print(d) #returns deque([3, 1, 2])
+
+d.pop()
+print(d) #returns deque([3, 1])
+
+d.popleft()
+print(d) #returns deque([1])
+
+d.extend([1, 2, 3, 4])
+print(d) #returns deque([1, 1, 2, 3, 4]). extends to the right
+#d.extendleft extends to the left
+
+
+#itertools: product
+from itertools import product
+a = [1, 2]
+b = [3, 4]
+prod = product(a, b)
+print(prod) #returns <itertools.product object at 0x000001A2003E93C0>
+print(list(prod)) #returns [(1, 3), (1, 4), (2, 3), (2, 4)]
+  
+#permuatation returns all the possible orderings
+from itertools import  permutations
+a = [1, 2, 3]
+perm = permutations(a)
+print(list(perm)) #returns [(1, 2, 3), (1, 3, 2), (2, 1, 3), (2, 3, 1), (3, 1, 2), (3, 2, 1)]
+
+#specifying the length of the orderings
+perm = permutations(a, 2)
+print(list(perm)) #returns [(1, 2), (1, 3), (2, 1), (2, 3), (3, 1), (3, 2)]
+
+#combinations returns all possible combinations
+from itertools import combinations
+a = [1, 2, 3, 4]
+com = combinations(a, 2)
+print(list(com)) #returns [(1, 2), (1, 3), (1, 4), (2, 3), (2, 4), (3, 4)]
+
+from itertools import combinations, combinations_with_replacement
+a = [1, 2, 3, 4]
+com = combinations_with_replacement(a, 2)
+print(list(com)) #returns [(1, 1), (1, 2), (1, 3), (1, 4), (2, 2), (2, 3), (2, 4), (3, 3), (3, 4), (4, 4)]
+
+#accumulate returns accumulate sum
+from itertools import accumulate
+a = [1, 2, 3, 4]
+acc = accumulate(a)
+print(list(acc)) #returns [1, 3, 6, 10]
+
+#accumulated multiplication
+from itertools import accumulate
+import operator
+a = [1, 2, 3, 4]
+acc = accumulate(a, func=operator.mul)
+print(list(acc)) #returns [1, 2, 6, 24]
+
+#lambda
+mult = lambda x,y: x*y
+print(mult(2,3))
+
+
+#sorting with lambda
+list = [(1, 4), (6, 3), (3, 4)]
+sorted_list = sorted(list)
+print(sorted_list) #sorts by the first key value.returns [(1, 4), (3, 4), (6, 3)]'''
+#to sort by the second key valuee
+sorted_list = sorted(list, key = lambda x: x[1])
+print(sorted_list) #returns [(6, 3), (1, 4), (3, 4)]
+
+lambda map fuction
+a = (1, 2, 3, 4)
+b = map(lambda x: x*2, a)
+print(list(b)) #returns [2, 4, 6, 8]
+#similar syntax
+c = [x*2 for x in a]
+print(c) #returns [2, 4, 6, 8]
+
+#filter lambda func
+a = [1, 2, 3, 4, 5, 6]
+b = filter(lambda x: x%2==0, a)
+print(list(b))
+
+c = [x for x in a if x%2==0]
+print(c)
+
+#Lambda reduce func
+from functools import reduce
+a = [1, 2, 3, 4]
+b = reduce(lambda x,y: x*y, a)
+print(b) #returns 24
+
+#Raising exceptions
+x = -4
+if x < 0:
+    raise Exception('x should be positive')
+print(x)
+
+#catching the type of an error
+try:
+    a = 5 / 0
+except Exception as e:
+    print(e) #returns division by zero
+
+#defining own errors
+class ValueTooHighError(Exception):
+    pass
+
+def test_value(x):
+    if x >= 100:
+        raise ValueTooHighError('Value is too high')
+
+try:
+    test_value(200)
+except ValueTooHighError as e:
+    print(e)
